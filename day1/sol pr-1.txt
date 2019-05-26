@@ -1,0 +1,41 @@
+class Solution:
+    def myAtoi(self, str: str) -> int:
+        s=str.strip()
+        if len(s)==0:
+            return 0
+        if s[0].isdigit():
+            su=0
+            for i in s:
+                if i.isdigit():
+                    su=su*10+int(i)
+                else:
+                    break
+            if su>(2**31)-1:
+                return (2**31)-1
+            else:
+                return su
+        elif s[0]=='+':
+            su=0
+            for i in s[1:]:
+                if i.isdigit():
+                    su=su*10+int(i)
+                else:
+                    break;
+            if su>(2**31)-1:
+                return (2**31)-1
+            else:
+                return su
+        elif s[0]=='-':
+            su=0
+            for i in s[1:]:
+                if i.isdigit():
+                    su=su*10+int(i)
+                else:
+                    break
+            su=su*(-1)
+            if su<((2**31)*(-1)):
+                return ((2**31)*(-1))
+            else:
+                return su
+        else:
+            return 0
