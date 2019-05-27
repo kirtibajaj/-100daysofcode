@@ -1,0 +1,21 @@
+OPENING_BRACKETS = {"{", "[", "("}
+BRACKETS_MAP = {"]": "[", "}": "{", ")": "("}
+class Solution:
+    def isValid(self, s: str) -> bool:
+        if not s:  # empty string is a valid string
+            return True
+        if s[0] not in OPENING_BRACKETS:
+            return False  # early exit if string does not start with an opening bracket
+        stack = []
+        for index, bracket in enumerate(s):
+            if bracket in OPENING_BRACKETS:
+                stack.append(bracket)
+            else:
+                try:
+                    last_opening_bracket = stack.pop()
+                    if last_opening_bracket != BRACKETS_MAP[bracket]:  # last closing bracket does not match last opening bracket
+                        return False
+                except IndexError:
+                    return False  # pop from an empty stack means the brackets are not balanced
+
+        return not stack  # if something left on stack, brackets are unbalanced
