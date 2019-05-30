@@ -1,0 +1,14 @@
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        d1=list(set(s))
+        d2=list(set(t))
+        d1.sort()
+        d2.sort()
+        if d1==d2:
+            for i in d1:
+                if s.count(i)!=t.count(i):
+                    return False
+            return True
+        else:
+            return False
+        
