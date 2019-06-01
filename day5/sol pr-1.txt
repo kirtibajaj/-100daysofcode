@@ -1,0 +1,35 @@
+# Write your code here
+
+s=list(input().strip().split("."))
+
+if len(s)==4:
+
+    c=0
+
+    for i in s:
+
+        if i.isdigit():
+
+            if int(i)>=0 and int(i)<=255:
+
+                c+=1
+
+            else:
+
+                print("NO")
+
+                break
+
+        else:
+
+            print("NO")
+
+            break
+
+    if c==4:
+
+        print("YES")
+
+else:
+
+    print("NO")

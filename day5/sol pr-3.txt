@@ -1,0 +1,17 @@
+# Write your code here
+
+t=int(input(""))
+
+for i in range(0,t):
+
+    s=input("").strip().lower()
+
+    m=set(s)
+
+    if len(m)%2:
+
+        print("Player1")
+
+    else:
+
+        print("Player2")

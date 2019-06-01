@@ -1,0 +1,21 @@
+# Write your code here
+
+l=[]
+
+for i in range(int(input())):
+
+    l.append(int(input()))
+
+m=max(l)
+
+mod=10**9+7
+
+f=[1,1]
+
+for i in range(2,m+1):
+
+    f.append(f[-1]*i%mod)
+
+for j in l:
+
+    print((3*f[j]+3)%mod)
