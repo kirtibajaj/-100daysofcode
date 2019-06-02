@@ -1,0 +1,23 @@
+# Write your code here
+
+n = int(input())
+
+for i in range(n):
+
+    m = int(input())
+
+    a = 0
+
+    for _ in range(m):
+
+        l = list(map(int,input().split()))
+
+        a += l[1]*l[0]
+
+    while(a>9):
+
+        res = [int(x) for x in str(a)]
+
+        a = sum(res)
+
+    print(a)

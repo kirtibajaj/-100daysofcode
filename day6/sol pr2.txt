@@ -1,0 +1,30 @@
+
+# Write your code here
+
+#def f(x):
+
+#    return x%3 == 0 or x%5 == 0
+
+import math
+
+for _ in range(int(input())):
+
+    n=int(input())
+
+    #print(sum(filter(f, range(1, n))))
+
+    n=n-1
+
+    l = math.floor(n //3)
+
+    m = math.floor(n //5)
+
+    n = math.floor(n //15)
+
+    lnum = 3*((l*(l+1))//2)
+
+    mnum = 5*((m*(m+1))//2)
+
+    nnum = 15*((n*(n+1))//2)
+
+    print(lnum+mnum-nnum)

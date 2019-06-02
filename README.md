@@ -11,3 +11,5 @@ In this I Code daily and add my solved code here
 * 30th may 2019, 4 problem Leetcode
 
 * 1st june 2019, 3 problem Hackerearth
+
+* 2nd june 2019, 2 problem Hackerearth
