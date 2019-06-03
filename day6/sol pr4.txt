@@ -1,0 +1,20 @@
+def f(candidates,target,l,x,i):
+    s=0
+    if target<0:
+        return
+    if target==0:
+        m=x[:]
+        l.append(m)
+        return
+    while(i < len(candidates) and target - candidates[i] >= 0):
+        x.append(candidates[i]) 
+        f(candidates, target-candidates[i],l,x,i); 
+        i+=1;
+        s=x.pop()
+class Solution:
+    def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
+        candidates.sort()
+        l=[]
+        x=[]
+        f(candidates,target,l,x,0)
+        return l

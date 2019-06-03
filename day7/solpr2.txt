@@ -1,0 +1,26 @@
+'''
+# Sample code to perform I/O:
+ 
+name = input()                  # Reading input from STDIN
+print('Hi, %s.' % name)         # Writing output to STDOUT
+ 
+# Warning: Printing unwanted or ill-formatted data to output will cause the test cases to fail
+'''
+ 
+# Write your code here
+l=int(input())
+a=input()
+b=input()
+a1=set(a)
+b1=set(b)
+if a1==b1:
+    for i in a1:
+        if a.count(i)!=b.count(i):
+            print("NO")
+            break
+    
+    else:        
+        print("YES")
+else:
+    print("NO")
+    
