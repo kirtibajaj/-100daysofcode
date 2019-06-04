@@ -1,0 +1,8 @@
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        for i in nums:
+            if i not in nums[nums.index(i)+1:]:
+                return i
+        else:
+            return 0
+        

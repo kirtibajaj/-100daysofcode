@@ -1,0 +1,13 @@
+class Solution:
+    def findAnagrams(self, s: str, p: str) -> List[int]:
+        l=len(p)
+        sol=[]
+        for j in range(len(s)):
+            c1=[];c2=[]
+            x=s[j:j+l]
+            for i in list(set(p)):
+                c1.append(p.count(i))
+                c2.append(x.count(i))
+            if c1==c2:
+                sol.append(j)
+        return sol
