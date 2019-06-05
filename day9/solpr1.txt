@@ -1,0 +1,11 @@
+# Write your code here
+
+a=input()
+
+sum=0
+
+for i in a:
+
+    sum+=(ord(i)-96)
+
+print(sum)
