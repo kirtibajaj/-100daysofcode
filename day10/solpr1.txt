@@ -1,0 +1,18 @@
+
+# Write your code here
+
+c=0
+
+for _  in range(int(input())):
+
+    x,y=map(int,input().split())
+
+    length=2*(22/7)*x
+
+    meters=y*100
+
+    if length<=meters:
+
+        c=c+1
+
+print(c)

@@ -1,0 +1,15 @@
+# Write your code here
+
+from datetime import date
+
+from datetime import timedelta
+
+from datetime import datetime
+
+for _ in range(int(input())):
+
+    d = datetime.strptime(input(), "%d %B %Y")
+
+    y = d - timedelta(days=1)
+
+    print(y.day, y.strftime("%B"), y.year)

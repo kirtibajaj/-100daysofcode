@@ -1,0 +1,19 @@
+# Write your code here
+
+for _ in range(int(input())):
+
+    r=int(input())
+
+    sol=0
+
+    for i in range(1,r+1):
+
+        for j in range(1,(r//3)):
+
+            bacha_hua=r-(i+3*j)
+
+            if bacha_hua>=4 and bacha_hua%4==0:
+
+                sol+=1
+
+    print(sol)
