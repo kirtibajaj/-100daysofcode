@@ -1,0 +1,31 @@
+import math
+def queue_and_stack (A):
+    # Write your code here
+    A=list(A)
+    maxlength=max(A)
+    prime=chk_prime(maxlength+1)
+    stack=[]
+    out=[]
+    for i in A:
+        if(prime[i]==True):
+            print(i,end=" ")
+        else:
+            stack.append(i)
+    print()        
+    print(' '.join(map(str,stack[::-1])))
+    return []
+ 
+def chk_prime(n):
+    prime = [True for i in range(n+1)]
+   
+    for p in range(2,int(n ** 0.5)):
+        if (prime[p] == True):
+            for i in range(p * 2, n+1, p):
+                prime[i] = False
+    return prime
+n = int(input())
+A = map(int, input().split())
+ 
+out_ = queue_and_stack(A)
+for i_out_ in out_:
+    print (' '.join(map(str, i_out_)))

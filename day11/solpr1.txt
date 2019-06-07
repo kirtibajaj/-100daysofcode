@@ -1,0 +1,30 @@
+# Write your code here
+
+n=int(input())
+
+p1=list(map(int,input().split()))
+
+p2=list(map(int,input().split()))
+
+c=0
+i=1
+while(i<=n):
+
+    while(p1[0]!=p2[0]):
+
+        x=p1.pop(0)
+
+        p1.append(x)
+
+        c+=1
+
+    else:
+
+        p1.pop(0)
+
+        p2.pop(0)
+
+        c+=1
+
+    i+=1
+print(c)

@@ -1,0 +1,18 @@
+# Write your code here
+n,k=map(int,input().split())
+l=list(map(int,input().split()))
+if k==1:
+    print(l[0])
+    exit()
+else:
+    total=l[0]
+    for i in range(n-1,n-k,-1):
+        total+=l[i]
+    maximum=total
+    j=1
+    for i in range(n-k+1,n):
+        total=total-l[i]+l[j]
+        j=j+1
+        if total>maximum:
+            maximum=total
+print(maximum)
