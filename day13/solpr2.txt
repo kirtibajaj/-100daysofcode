@@ -1,0 +1,14 @@
+n,k=map(int,input().split())
+l=list(map(int,input().split()))
+sol=[]
+maxi=max(l)
+mini=min(l)
+d=maxi-mini+1
+coverage=(k*2)+1
+
+if d%coverage==0:
+    print(d//coverage)
+else:
+    print((d//coverage)+1)
+
+
