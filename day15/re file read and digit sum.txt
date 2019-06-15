@@ -1,0 +1,10 @@
+import re
+hand=open('data.txt')
+numlist=list()
+stuff=[]
+for line in hand:
+    line=line.rstrip()
+    stuff.extend(re.findall('(\d+)',line))
+print(stuff)
+numlist=[int(x) for x in stuff]
+print(sum(numlist))
