@@ -1,0 +1,13 @@
+def deleteNode(head, position):
+    ptr=head
+    if position==0:
+        head=head.next
+        return head
+    pos=0
+    while(pos<position):
+        preptr=ptr
+        ptr=ptr.next
+        pos+=1
+    preptr.next=ptr.next
+    del(ptr)
+    return head

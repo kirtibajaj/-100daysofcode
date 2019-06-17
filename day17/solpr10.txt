@@ -1,0 +1,11 @@
+def countingSort(arr):
+    a=[0 for _ in range(n+1)]
+    d={}
+    x=list(set(arr))
+    for i in x:
+        d[i]=arr.count(i)
+    sol=[]
+    for i in d.keys():
+        for j in range(d[i]):
+            sol.append(i)
+    return sol

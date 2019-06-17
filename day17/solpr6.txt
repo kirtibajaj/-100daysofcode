@@ -1,0 +1,11 @@
+def reverse(head):
+    ptr=head
+    prev=None
+    x=None
+    while(ptr is not None):
+        x=ptr.next
+        ptr.next=prev
+        prev=ptr
+        ptr=x
+    head=prev
+    return head
