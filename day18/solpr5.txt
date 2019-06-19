@@ -1,0 +1,48 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+def pos(n):
+    if n<0:
+        return ((-1)*n)
+    else:
+        return (n)
+# Complete the funnyString function below.
+def funnyString(s):
+    l=[]
+    lr=[]
+    d=[]
+    dr=[]
+    for i in s:
+        l.append(ord(i))
+    r=s[::-1]
+    for i in r:
+        lr.append(ord(i))
+    for i in range(len(l)-1):
+        d.append(pos(l[i+1]-l[i]))
+    for i in range(len(l)-1):
+        dr.append(pos(lr[i+1]-lr[i]))
+    for i in range(len(l)-1):
+        if dr[i] == d[i]:
+            pass
+        else:
+            return ("Not Funny")
+    else:
+        return("Funny")
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    q = int(input())
+
+    for q_itr in range(q):
+        s = input()
+
+        result = funnyString(s)
+
+        fptr.write(result + '\n')
+
+    fptr.close()

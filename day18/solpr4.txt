@@ -1,0 +1,36 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the pangrams function below.
+def pangrams(s):
+    a='a'
+    A='A'
+    l=[]
+    L=[]
+    for i in range(0,26):
+        l.append(a)
+        L.append(A)
+        a=chr(ord(a)+1)
+        A=chr(ord(A)+1)
+    for i in range(26):
+        if l[i] in s or L[i] in s:
+            pass
+        else:
+            return("not pangram")
+    return("pangram")
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    s = input()
+
+    result = pangrams(s)
+
+    fptr.write(result + '\n')
+
+    fptr.close()

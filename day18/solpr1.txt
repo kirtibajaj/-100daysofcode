@@ -1,0 +1,43 @@
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the gridlandMetro function below.
+def gridlandMetro(n, m, k, track):
+    x=[1 for i in range(m)]
+    l=[x[:] for i in range(n)]
+    cout=0
+    for i in range(len(track)):
+        rcC=track[i]
+        r=int(rcC[0])
+        c=int(rcC[1])
+        C=int(rcC[2])
+        print(r,c,C)
+        for j in range(c-1,C):
+            l[r-1][j]=0
+    print(l)
+    for i in range(len(l)):
+        cout+=l[i].count(1)
+    return cout
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    nmk = input().split()
+    n = int(nmk[0])
+    m = int(nmk[1])
+    k = int(nmk[2])
+
+    track = []
+
+    for _ in range(k):
+        track.append(list(map(int, input().rstrip().split())))
+
+    result = gridlandMetro(n, m, k, track)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
