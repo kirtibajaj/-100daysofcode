@@ -1,0 +1,7 @@
+count=0
+for _ in range(int(input())):
+    w,h=map(int,input().split())
+    if ((((w/h)>=1.6)and((w/h)<=1.7))or(((h/w)>=1.6)and((h/w)<=1.7))):
+        count+=1
+print(count)
+# Write your code here

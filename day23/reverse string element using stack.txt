@@ -1,0 +1,18 @@
+def reverse(string):
+
+    stack=list()
+
+    s=[]
+
+    for i in string:
+
+        stack.append(i)
+
+    for i in range(len(string)):
+
+        s.append(stack.pop())
+
+    string="".join(s)
+
+    return string
+ 

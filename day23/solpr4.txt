@@ -1,0 +1,14 @@
+# Write your code here
+t=int(input())
+for i in range(t):
+    suvo=0
+    suvojit=0
+    string=input()
+    for i in range(len(string)):
+        if(string[i:i+7].lower()=="suvojit"):
+            suvojit+=1
+            i=i+7
+        elif(string[i:i+4].lower()=="suvo"):
+            suvo+=1
+            i=i+4
+    print("SUVO =",str(suvo)+",","SUVOJIT =",suvojit)

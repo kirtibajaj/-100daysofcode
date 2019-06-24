@@ -1,0 +1,14 @@
+# Write your code here
+d={'a':0,'b':0}
+for i in range(int(input())):
+    s=input().split()
+    for i in s:
+        if i.isdigit():
+            if i=='19' or i=='20':
+                d['a']+=1
+            else:
+                d['b']+=1
+if(d['a']*4>d['b']*3):
+    print('Date')
+else:
+    print('No Date')

@@ -1,0 +1,16 @@
+ 
+# Write your code here
+n=int(input())
+l=list(map(int,input().split()))
+s=0
+c=0
+for i in range(n):
+    if l[i]>=0:
+        c+=1
+        s+=l[i]
+if s<=0:
+    print(max(l),"1")
+ 
+else:
+    print(s,c)
+    

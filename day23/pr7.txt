@@ -1,0 +1,21 @@
+Golden rectangles
+Attempted by: 2029/Accuracy: 30%/Maximum Score: 20/
+ 38 Votes
+Tag(s): Algorithms, Easy, Linear search, Searching algorithm
+PROBLEM
+EDITORIAL
+MY SUBMISSIONS
+ANALYTICS
+You have  rectangles. A rectangle is golden if the ratio of its sides is in between , both inclusive. Your task is to find the number of golden rectangles.
+
+Input format
+
+First line: Integer  denoting the number of rectangles
+Each of the  following lines: Two integers  denoting the width and height of a rectangle
+Output format
+
+Print the answer in a single line.
+Constraints
+
+
+

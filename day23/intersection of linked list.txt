@@ -1,0 +1,35 @@
+def intersetPoint(head_a,head_b):
+
+    if head_a is None or head_b is None:
+
+        return None
+
+    else:
+
+        l=[]
+
+        l2=[]
+
+        ptr1=head_a
+
+        ptr2=head_b
+
+        while ptr1 is not None:
+
+            l.append(ptr1)
+
+            ptr1=ptr1.next
+
+        while ptr2 is not None:
+
+            l2.append(ptr2)
+
+            ptr2=ptr2.next
+
+        for i in l:
+
+            if i in l2:
+
+                return i
+
+        return head_a

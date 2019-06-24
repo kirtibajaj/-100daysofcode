@@ -1,0 +1,32 @@
+Find wrong number in series
+Attempted by: 213/Accuracy: 38%/Maximum Score: 20/
+ 5 Votes
+Tag(s): Easy
+PROBLEM
+EDITORIAL
+MY SUBMISSIONS
+ANALYTICS
+Your friend Rohit loves making problems and solving them. But this time he is unable to solve problem he has made. As he knows you are good in programming he has come to ask you for your help in solving it. You are given a series having ith term of the form ai = iv - iu where  i is between 1 and N(1 and N inclusive). You have to find for which of the possible values of v and u,  the given series has ai = iv - iu given that atmost one term can be incorrect from the original series.
+
+Input:
+First line contains the number of test cases T.
+For each of the T test cases first line contains an integer N
+The next line contains N space separated number of the series.
+
+Output:
+If the given series is fully correct for a particular value of v and u print "Correct" else print "Incorrect" followed by the incorrect term.
+
+Constraints:
+1 = T = 10
+0 = ai = 109
+5 = N = 100
+1 = U < V = 4
+
+SAMPLE INPUT 
+1
+5
+0 30 6 12 20 
+
+SAMPLE OUTPUT 
+Incorrect 30
+
