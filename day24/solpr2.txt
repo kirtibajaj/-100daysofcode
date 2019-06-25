@@ -1,0 +1,10 @@
+# Write your code here
+p_ascii_no = [67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113]
+for _ in range(int(input())):
+    n = int(input())
+    word = input()
+    magical_word = ''
+    for j in word:
+        ascii_value = ord(j)
+        magical_word += chr(min(p_ascii_no, key=lambda x:abs(x-ascii_value)))
+    print(magical_word)
