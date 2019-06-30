@@ -1,0 +1,22 @@
+## Read input as specified in the question.
+## Print output as specified in the question.
+def pattern(n): 
+    c=1
+    for i in range(0, 2*n-1): 
+        j = 2*n-2-i 
+        for k in range(0, 2*n-1): 
+          
+            if (k == i or k == j): 
+                print(c,  
+                      end = "") 
+            else: 
+                print(end = " ") 
+          
+        print("")  
+        if i>=n-1:
+            c-=1
+        else:
+            c+=1
+  
+n=int(input()) 
+pattern(n) 

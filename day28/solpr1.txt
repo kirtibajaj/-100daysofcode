@@ -1,0 +1,22 @@
+## Read input as specified in the question.
+## Print output as specified in the question.
+def pangrams(s):
+    a='a'
+    A='A'
+    l=[]
+    L=[]
+    for i in range(0,26):
+        l.append(a)
+        L.append(A)
+        a=chr(ord(a)+1)
+        A=chr(ord(A)+1)
+    for i in range(26):
+        if l[i] in s or L[i] in s:
+            pass
+        else:
+            return("NO")
+    else:
+        return("YES")
+n=int(input())
+l=input()
+print(pangrams(l))
