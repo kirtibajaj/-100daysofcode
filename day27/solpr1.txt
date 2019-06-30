@@ -1,0 +1,8 @@
+## Read input as specified in the question.
+## Print output as specified in the question.
+sum=0
+l=list(map(int,input().split()))
+for i in l[1:]:
+    if i%2==0 or i%3==0:
+        sum+=i
+print(sum)
