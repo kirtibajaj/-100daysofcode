@@ -1,0 +1,46 @@
+{
+
+# Your code goes here
+
+if __name__=='__main__':
+
+    t = int(input())
+
+    for i in range(t):
+
+        n = int(input().strip())
+
+        arr = list(map(int, input().strip().split()))
+
+        matrix = [[0 for i in range(n)]for j in range(n)]
+
+        k=0
+
+        for i in range(n):
+
+            for j in range(n):
+
+                matrix[i][j] = arr[k]
+
+                k+=1
+
+        print (countZeroes(matrix, n))
+}
+
+''' This is a function problem.You only need to complete the function given below '''
+
+# You are required to complete this fucntion
+
+# Function should return the an integer
+
+def countZeroes(arr, n):
+
+    # Code here
+
+    ct=0
+
+    for i in arr:
+
+        ct+=i.count(0)
+
+    return ct

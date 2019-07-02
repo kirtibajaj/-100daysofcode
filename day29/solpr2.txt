@@ -1,0 +1,49 @@
+{
+
+if __name__=='__main__':
+
+    t=int(input())
+    for i in range(t):
+
+        n=int(input())
+
+        arr=list(map(int, input().strip().split(' ')))
+
+        x=int(input())
+
+        print (bin_search(arr, 0, 0, x))
+}
+
+''' This is a function problem.You only need to complete the function given below '''
+
+#Your task is to complete this function
+
+#Function should return integer denoting the index
+
+# indexing is done according to 0
+
+# Left=0 and High=0
+
+def bin_search(arr, left, high, key):
+
+    #Code here
+
+    high=len(arr)-1
+
+    while(left<=high):
+
+        mid=(left+high)//2
+
+        if arr[mid]==key:
+
+            return mid
+
+        if arr[mid]<key:
+
+            left=mid+1
+
+        else:
+
+            high=mid-1
+
+    return -1
